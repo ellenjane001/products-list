@@ -1,8 +1,15 @@
-import Layout from '@/components/layout/layout'
-import React from 'react'
+'use client'
+import AddProducts from '@/components/add-products'
+import Layout from '@/components/layout'
+import { Typography } from '@mui/material'
 
 export default function products() {
     return (
-        <Layout>products</Layout>
+        <Layout>
+            <Typography variant='h5'>
+                Products Management
+            </Typography>
+            <AddProducts />
+        </Layout>
     )
 }
