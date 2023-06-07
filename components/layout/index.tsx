@@ -1,13 +1,15 @@
 import React from 'react'
 import { LayoutPaper } from '../styled-components'
+import NavigationBar from '../navigation'
 
 type layoutProps = {
     children: React.ReactNode
 }
 const Layout = ({ children }: layoutProps) => {
     return (
-        <main className="flex min-h-screen flex-col items-center p-2">
+        <main>
             <LayoutPaper>
+                <NavigationBar />
                 {children}
             </LayoutPaper>
         </main>
