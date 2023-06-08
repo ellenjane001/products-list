@@ -8,11 +8,7 @@ export default function Home() {
   return (
     <Layout>
       <div className='flex flex-col items-center'>
-        <LoginButton />
-        {status === "authenticated" && <>
-          <LogoutButton />
-          <ProfileButton /></>}
-
+        {status === "loading" && <LoginButton />}
       </div>
 
     </Layout>

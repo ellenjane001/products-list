@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import { signIn, signOut } from "next-auth/react";
 import Link from "next/link";
+import { StyledButtonLink } from "../styled-components";
 
 export const LoginButton = () => {
     return (
@@ -20,9 +21,9 @@ export const RegisterButton = () => {
 
 export const LogoutButton = () => {
     return (
-        <button style={{ marginRight: 10 }} onClick={() => signOut()}>
+        <StyledButtonLink color="secondary" style={{ marginRight: 10 }} onClick={() => signOut()}>
             Sign Out
-        </button>
+        </StyledButtonLink>
     );
 };
 
