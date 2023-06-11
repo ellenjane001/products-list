@@ -3,14 +3,13 @@
 import { Button } from "@mui/material";
 import React, { ChangeEvent, useState } from "react";
 
-
 const BatchUpload = () => {
-    const [selectedFile, setSelectedFile] = useState(null);
+    const [selectedFile, setSelectedFile] = useState<Blob>();
     const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
         if (event.target.files && event.target.files.length > 0) {
             setSelectedFile(event.target.files[0]);
         } else {
-            setSelectedFile(null);
+            setSelectedFile(undefined);
         }
     };
 
